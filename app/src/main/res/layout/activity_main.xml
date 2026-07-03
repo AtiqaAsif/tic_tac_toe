@@ -1,208 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:gravity="center"
-android:padding="20dp"
-android:background="#1A1A2E"
-tools:context=".MainActivity">
-
-<!-- Title -->
-<TextView
-    android:id="@+id/titleText"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Tic Tac Toe"
-    android:textSize="32sp"
-    android:textColor="#FFFFFF"
-    android:textStyle="bold"
-    android:layout_marginBottom="30dp"
-    android:fontFamily="sans-serif-medium"/>
-
-<!-- Game Status -->
-<TextView
-    android:id="@+id/statusText"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Select Game Mode"
-    android:textSize="24sp"
-    android:textColor="#E94560"
-    android:layout_marginBottom="20dp"
-    android:fontFamily="sans-serif"/>
-
-<!-- Game Board -->
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:gravity="center">
-
-    <!-- Row 1 -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button_00"
-            style="@style/GameButton"
-            android:layout_margin="5dp"/>
-
-        <Button
-            android:id="@+id/button_01"
-            style="@style/GameButton"
-            android:layout_margin="5dp"/>
-
-        <Button
-            android:id="@+id/button_02"
-            style="@style/GameButton"
-            android:layout_margin="5dp"/>
-    </LinearLayout>
-
-    <!-- Row 2 -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button_10"
-            style="@style/GameButton"
-            android:layout_margin="5dp"/>
-
-        <Button
-            android:id="@+id/button_11"
-            style="@style/GameButton"
-            android:layout_margin="5dp"/>
-
-        <Button
-            android:id="@+id/button_12"
-            style="@style/GameButton"
-            android:layout_margin="5dp"/>
-    </LinearLayout>
-
-    <!-- Row 3 -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button_20"
-            style="@style/GameButton"
-            android:layout_margin="5dp"/>
-
-        <Button
-            android:id="@+id/button_21"
-            style="@style/GameButton"
-            android:layout_margin="5dp"/>
-
-        <Button
-            android:id="@+id/button_22"
-            style="@style/GameButton"
-            android:layout_margin="5dp"/>
-    </LinearLayout>
-</LinearLayout>
-
-<!-- Score Display -->
-<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginTop="30dp"
-    android:gravity="center">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="#1A1A2E"
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="0dp"
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:text="Tic Tac Toe"
+        android:textSize="32sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-medium"/>
+
+    <!-- Current Mode Display -->
+    <TextView
+        android:id="@+id/modeDisplayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode: 2 Players"
+        android:textSize="16sp"
+        android:textColor="#AAAAAA"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif-light"/>
+
+    <!-- Game Status -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player X's Turn"
+        android:textSize="22sp"
+        android:textColor="#E94560"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif"/>
+
+    <!-- Game Board -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/button_00" style="@style/GameButton" android:layout_margin="5dp"/>
+            <Button android:id="@+id/button_01" style="@style/GameButton" android:layout_margin="5dp"/>
+            <Button android:id="@+id/button_02" style="@style/GameButton" android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/button_10" style="@style/GameButton" android:layout_margin="5dp"/>
+            <Button android:id="@+id/button_11" style="@style/GameButton" android:layout_margin="5dp"/>
+            <Button android:id="@+id/button_12" style="@style/GameButton" android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/button_20" style="@style/GameButton" android:layout_margin="5dp"/>
+            <Button android:id="@+id/button_21" style="@style/GameButton" android:layout_margin="5dp"/>
+            <Button android:id="@+id/button_22" style="@style/GameButton" android:layout_margin="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Score Display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
         android:gravity="center">
 
         <TextView
             android:id="@+id/playerXScore"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Player X: 0"
-            android:textSize="18sp"
-            android:textColor="#0F3460"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center">
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
 
         <TextView
             android:id="@+id/drawScore"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Draws: 0"
-            android:textSize="18sp"
-            android:textColor="#533483"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center">
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
 
         <TextView
             android:id="@+id/playerOScore"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Player O: 0"
-            android:textSize="18sp"
-            android:textColor="#E94560"/>
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
     </LinearLayout>
-</LinearLayout>
 
-<!-- AI Controls -->
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginTop="10dp"
-    android:gravity="center">
+    <!-- Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
 
+        <Button
+            android:id="@+id/modeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mode"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="#533483"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/aiButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Difficulty"
+            android:layout_marginHorizontal="2dp"
+            android:backgroundTint="#533483"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/historyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="History"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="#E94560"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Reset Button -->
     <Button
-        android:id="@+id/aiButton"
-        android:layout_width="0dp"
+        android:id="@+id/resetButton"
+        android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_weight="1"
-        android:text="Difficulty"
-        android:textSize="16sp"
-        android:backgroundTint="#533483"
-        android:textColor="#FFFFFF"
-        android:layout_marginEnd="5dp"/>
-
-    <Button
-        android:id="@+id/historyButton"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_weight="1"
-        android:text="History"
-        android:textSize="16sp"
-        android:backgroundTint="#E94560"
-        android:textColor="#FFFFFF"
-        android:layout_marginStart="5dp"/>
-</LinearLayout>
-
-<!-- Reset Button -->
-<Button
-    android:id="@+id/resetButton"
-    android:layout_width="200dp"
-    android:layout_height="50dp"
-    android:text="New Game"
-    android:textSize="18sp"
-    android:layout_marginTop="20dp"
-    android:backgroundTint="#0F3460"
-    android:textColor="#FFFFFF"/>
+        android:text="New Game"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#0F3460"
+        android:textColor="#FFFFFF"/>
 
 </LinearLayout>
